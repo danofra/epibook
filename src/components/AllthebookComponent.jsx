@@ -10,11 +10,11 @@ class Allthebook extends Component {
   render() {
     return (
       <Container>
-        <Row className="justify-content-center m-2">
+        <Row className="g-3 justify-content-center m-2">
           <h1 className="text-center">All the books</h1>
           {Books.map((book) => (
             <Col xs={6} md={4} lg={3} xl={2} key={book.asin}>
-              <Card>
+              <Card className="h-100">
                 <Card.Img variant="top" src={book.img} />
                 <Card.Body>
                   <Card.Title className="text-center">{book.title}</Card.Title>
