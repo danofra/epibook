@@ -11,23 +11,29 @@ class Allthebook extends Component {
     return (
       <Container>
         <Row className="g-3 justify-content-center m-2">
-          <h1 className="text-center">All the books</h1>
+          <h1 id="allbook" className="text-center">
+            All the books
+          </h1>
           {Books.map((book) => (
-            <Col xs={6} md={4} lg={3} xl={2} key={book.asin}>
-              <Card className="h-100">
-                <Card.Img variant="top" src={book.img} />
+            <Col xs={6} md={4} lg={3} key={book.asin}>
+              <Card className="h-100 d-flex flex-column">
+                <Card.Img
+                  style={{ height: "350px" }}
+                  variant="top"
+                  src={book.img}
+                />
                 <Card.Body>
                   <Card.Title className="text-center">{book.title}</Card.Title>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                  <ListGroup.Item>Prezzo: {book.price}</ListGroup.Item>
+                  <ListGroup.Item>Prezzo: {book.price} €</ListGroup.Item>
                   <ListGroup.Item>Categoria: {book.category}</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-                  <Card.Link href="#">Visualizza dettagli</Card.Link>
-                  <Card.Link href="#">Aggiungi alla lista preferiti</Card.Link>
+                  <Card.Link href="#">Dettagli</Card.Link>
+                  <Card.Link href="#">Preferiti</Card.Link>
                 </Card.Body>
-              </Card>{" "}
+              </Card>
             </Col>
           ))}
         </Row>

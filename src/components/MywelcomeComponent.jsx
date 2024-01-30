@@ -12,7 +12,9 @@ function Mywelcome() {
         capire meglio la tua cultura e i tuoi tradizionali.
       </p>
       <hr />
-      <p>Scorri giù e scoprirai....</p>
+      <p>
+        <a href="#allbook">Premi e scoprirai....</a>
+      </p>
     </Alert>
   );
 }

@@ -10,12 +10,10 @@ function App() {
     <>
       <header>
         <MynavComponent />
-        <Mywelcome />
       </header>
-      <main>
-        <>
-          <AllthebookComponent />
-        </>
+      <main className="bg-light">
+        <Mywelcome />
+        <AllthebookComponent />
       </main>
       <footer>
         <Myfooter />
