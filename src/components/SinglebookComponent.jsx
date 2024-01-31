@@ -7,23 +7,21 @@ import { Component } from "react";
 
 class Singlebook extends Component {
   state = {
-    selected: "h-100",
+    selected: false,
   };
   render() {
     return (
-      <Col
+      <Col id="col"
         xs={6}
         md={4}
         lg={3}
-        onClick={() =>
-          this.state.selected === "h-100"
-            ? this.setState({
-                selected: "border border-2 border-danger h-100",
-              })
-            : this.setState({ selected: "h-100" })
-        }
+        onClick={() => {
+          this.setState({
+            selected: this.state.selected ? false : true,
+          });
+        }}
       >
-        <Card className={this.state.selected}>
+        <Card className={this.state.selected ? "h-100 select" : "h-100"}>
           <Card.Img
             style={{ height: "350px" }}
             variant="top"

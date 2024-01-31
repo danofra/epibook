@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#col > .select {
+  border: 2px solid red;
+}
