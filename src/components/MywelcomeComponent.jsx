@@ -2,7 +2,7 @@ import Alert from "react-bootstrap/Alert";
 
 function Mywelcome() {
   return (
-    <Alert variant="success" className="m-2 text-center">
+    <Alert variant="primary" className="m-2 text-center">
       <Alert.Heading>
         Hey tu, se sei arrivato fin qui, vuol dire che vuoi conoscere la storia
         del tuo paese!
