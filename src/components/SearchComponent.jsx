@@ -1,4 +1,3 @@
-
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -6,10 +5,11 @@ import Container from "react-bootstrap/Container";
 import { Component } from "react";
 
 class Search extends Component {
-  state = {
-    books: [],
+    state = {
+    books: this.props.books,
     search: "",
   };
+
   render() {
     return (
       <Container>
@@ -21,13 +21,14 @@ class Search extends Component {
                   <Form.Control
                     type="text"
                     placeholder="Search"
+                    value={this.state.search}
                     onChange={(e) =>
                       this.setState({
                         search: e.target.value,
                         books: this.props.books.filter((book) =>
                           book.title
                             .toLowerCase()
-                            .includes(this.state.search.toLowerCase())
+                            .includes(e.target.value.toLowerCase())
                         ),
                       })
                     }
