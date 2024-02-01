@@ -44,7 +44,7 @@ class Booklist extends Component {
         </Container>
 
         <Container>
-          <Row className="g-3 justify-content-center m-2">
+          <Row className="g-3 justify-content-around m-2">
             {this.state.books.map((book) => (
               <SinglebookComponent key={book.asin} books={book} />
             ))}
